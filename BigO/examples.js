@@ -52,3 +52,37 @@ function exponentialTimeFunction(arr) {
     console.log(i);
   }
 }
+
+
+
+
+
+
+
+function multiplyByTwo(inputNum) {
+  const result = inputNum * 2;
+  return result;
+}
+// 5
+function addTwoAndMultiply(inputNum) {
+  const result = 2 + multiplyByTwo(inputNum);
+  return result;
+}
+
+const res = addTwoAndMultiply(5);
+
+
+
+
+
+
+
+
+
+// Global Scope
+// addTwoAndMultiply: function
+// res: 12
+
+// Call Stack
+global()
+

@@ -5,21 +5,21 @@
  */
 
 // EXAMPLES
-let decrementCounter = (number) => {
-  // Base case condition....
-  if (number === 0) return;
-  console.log(number);
-  decrementCounter(number - 1);
-};
-decrementCounter(5);
+// let decrementCounter = (number) => {
+//   // Base case condition....
+//   if (number === 0) return;
+//   console.log(number);
+//   return decrementCounter(number - 1);
+// };
+// const res = decrementCounter(3);
+
 
 //  check whether the integer we have passed is Even or Odd.
+
 let checkNumber = (number) => {
   // Two base case conditions.....
   if (number === 0) return number + " is even";
-  if (number === 1) return number + " is odd";
+  if (number === 1) return " is odd";
   return checkNumber(number - 2);
 };
-console.log(checkNumber(5));
-console.log(checkNumber(10));
-console.log(checkNumber(13333));
+const val = checkNumber(5);

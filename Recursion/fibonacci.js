@@ -12,10 +12,10 @@ function fibonacci(n) {
   let fibPrev = 0;
   let fibCurr = 1;
   
-  for (let i = 2; i <= n; i++) {
-    let fibNext = fibPrev + fibCurr;
-    fibPrev = fibCurr;
-    fibCurr = fibNext;
+  for (let i = 2; i <= n; i++) { // 3
+    let fibNext = fibPrev + fibCurr; // 1, 2
+    fibPrev = fibCurr; // 1
+    fibCurr = fibNext; // 1
   }
   
   return fibCurr;
@@ -33,3 +33,11 @@ function fibonacci(n) {
 // Now lets do it recursively
 // The recursive solution is much more elegant, but it is also much less efficient.
 // The recursive solution has a time complexity of O(2^n), whereas the iterative solution has a time complexity of O(n).
+function fibRec(n) {
+  if (n === 0 || n === 1) {
+    return n;
+  }
+      // 1            2
+  return fibRec(n-1) + fibRec(n-2)
+}
+const res = fibRec(3)
