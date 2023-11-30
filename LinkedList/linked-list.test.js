@@ -69,7 +69,27 @@ test('it should accuratley return the size of the list', (t) => {
 test.todo('at');
 
 // ***** POP ******
-test.todo('pop');
+test('should work on an empty list', (t) => {
+  const tmpList = linkedList();
+  t.is(tmpList.size(), 0);
+  tmpList.pop();
+  t.is(tmpList.size(), 0);
+});
+
+test('should work on a list with one item', (t) => {
+  const tmpList = linkedList();
+  tmpList.append('item1');
+  t.is(tmpList.size(), 1);
+  tmpList.pop();
+  t.is(tmpList.size(), 0);
+  t.pass();
+});
+
+test('should remove the last item', (t) => {
+  const curTail = list.tail();
+  list.pop();
+  t.not(list.tail(), curTail);
+});
 
 // ***** CONTAINS ******
 test.todo('contains');
