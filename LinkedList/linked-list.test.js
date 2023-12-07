@@ -66,7 +66,35 @@ test('it should accuratley return the size of the list', (t) => {
 });
 
 // ***** AT ******
-test.todo('at');
+test('should return null on an empty list', (t) => {
+  const tmpList = linkedList();
+  t.is(tmpList.at(0), null);
+  t.is(tmpList.at(1), null);
+  t.is(tmpList.at(6), null);
+  t.is(tmpList.at(10), null);
+});
+
+test('should find an element at the current index', (t) => {
+  const tmpList = linkedList();
+  for (let i = 0; i < 100; i++) {
+    tmpList.append(`item${i}`);
+  }
+  t.is(tmpList.size(), 100);
+  t.is(tmpList.at(10).value, 'item9');
+  t.is(tmpList.at(21).value, 'item20');
+  t.is(tmpList.at(55).value, 'item54');
+  t.is(tmpList.at(1).value, 'item0');
+});
+
+test('should return null if the index is greater than the size', (t) => {
+  const tmpList = linkedList();
+  for (let i = 0; i < 10; i++) {
+    tmpList.append(`item${i}`);
+  }
+  t.is(tmpList.size(), 10);
+  t.is(tmpList.at(10).value, 'item9');
+  t.is(tmpList.at(20), null);
+});
 
 // ***** POP ******
 test('should work on an empty list', (t) => {
