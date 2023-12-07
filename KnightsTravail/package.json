@@ -1,0 +1,11 @@
+{
+  "name": "knights-travail",
+  "type": "module",
+  "scripts": {
+    "test": "ava",
+    "test:watch": "ava --watch"
+  },
+  "devDependencies": {
+    "ava": "^5.3.1"
+  }
+}
